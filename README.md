@@ -50,7 +50,7 @@ This project involves creating an inventory management system for a used cell ph
 - **Inventory → Sellers/Buyers** (One-to-Many via `SellerID`/`BuyerID`)  
 
 ![Relationships Diagram](images/relationships-diagram.png)
-
+![Navigation Panes](https://github.com/Gbekoilias/UsedPhonesDB_Management/blob/main/Navigation%20Pane.png?raw=true)
 ---
 
 ## Project Tasks  
