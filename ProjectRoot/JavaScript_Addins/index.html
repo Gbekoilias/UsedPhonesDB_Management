@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Add-in</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to CSS for styling -->
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script src="app.js" defer></script> <!-- Link to your JavaScript file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Data Fetcher Add-in</h1>
+        
+        <!-- Form Elements -->
+        <div class="form-group">
+            <label for="userInput">Enter your query:</label>
+            <input type="text" id="userInput" placeholder="Type your query here..." />
+        </div>
+
+        <!-- Button Actions -->
+        <div class="button-group">
+            <button id="submitButton">Submit</button>
+            <button id="clearButton">Clear</button>
+        </div>
+
+        <!-- Output Area -->
+        <div id="output" class="output-area">
+            <h2>Results:</h2>
+            <p>No results yet.</p>
+        </div>
+    </div>
+
+    <!-- Optional: Link to external CSS for styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border-radius: 4px;
+            border: none;
+            background-color: #0078d4; /* Microsoft Blue */
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005a9e; /* Darker blue on hover */
+        }
+        .output-area {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OfficeApp 
+    xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:type="TaskPaneApp">
+
+    <Id>your-addin-id-here</Id>
+    <Version>1.0.0.0</Version>
+    <ProviderName>Your Company Name</ProviderName>
+    <DefaultLocale>en-US</DefaultLocale>
+    <DisplayName DefaultValue="Your Add-in Name"/>
+    <Description DefaultValue="A brief description of your add-in."/>
+    
+    <!-- Permissions -->
+    <Permissions>ReadWriteDocument</Permissions>
+
+    <!-- Icons for the add-in -->
+    <IconUrl DefaultValue="https://yourdomain.com/icons/icon-32.png"/>
+    <HighResolutionIconUrl DefaultValue="https://yourdomain.com/icons/icon-80.png"/>
+
+    <!-- The URL for the add-in's task pane -->
+    <Hosts>
+        <Host Name="Document"/>
+        <Host Name="Workbook"/>
+        <Host Name="Presentation"/>
+        <Host Name="MailApp"/>
+    </Hosts>
+
+    <Requirements>
+        <Sets>
+            <Set Name="ExcelApi" MinVersion="1.1"/>
+            <Set Name="WordApi" MinVersion="1.1"/>
+            <Set Name="PowerPointApi" MinVersion="1.1"/>
+        </Sets>
+    </Requirements>
+
+    <!-- The URL where the add-in is hosted -->
+    <FormSettings>
+        <Form xsi:type="TaskPane">
+            <SourceLocation DefaultValue="https://yourdomain.com/your-addin.html"/>
+            <RequestedHeight>250</RequestedHeight>
+        </Form>
+    </FormSettings>
+
+</OfficeApp>
